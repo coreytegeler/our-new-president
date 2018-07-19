@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  font-family: arial;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+h1 {
+  font-size: calc(100vh/3 - 20px); }
+
+h2 {
+  font-size: 20px; }
+
+section {
+  height: calc(100vh/3 - 20px); }
+  section#white {
+    background: #FFFFFF; }
+  section#blue {
+    background: #124BB8; }
+  section#red {
+    background: #DC372B; }
+  section h1 {
+    margin: 0;
+    line-height: 1em;
+    white-space: nowrap;
+    cursor: default; }
+  section .marquee {
+    width: 100%;
+    overflow: hidden; }
+  section .ru {
+    display: none; }
+  section:hover .en {
+    display: none; }
+  section:hover .ru {
+    display: block; }
+
+nav {
+  width: 100%;
+  display: table;
+  background: black;
+  color: #FFFFFF; }
+  nav a, nav a:visited {
+    color: #FFFFFF; }
+    nav a:hover:nth-child(odd), nav a:visited:hover:nth-child(odd) {
+      color: #DC372B; }
+    nav a:hover:nth-child(even), nav a:visited:hover:nth-child(even) {
+      color: #124BB8; }
+  nav h2 {
+    display: inline-block;
+    margin: 1em; }

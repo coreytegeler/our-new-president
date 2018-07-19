@@ -1,0 +1,76 @@
+$white: #FFFFFF;
+$blue: #124BB8;
+$red: #DC372B;
+
+
+$md-text: 20px;
+$lg-text: calc(100vh/3 - #{$md-text});
+
+html, body {
+	margin: 0;
+	font-family: arial;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+h1 {
+	font-size: $lg-text;
+}
+h2 {
+	font-size: $md-text;
+}
+section {
+	height: $lg-text;
+	&#white {
+		background: $white;
+	}
+	&#blue {
+		background: $blue;	
+	}
+	&#red {
+		background: $red;
+	}
+	h1 {
+		margin: 0;
+		line-height: 1em;
+		white-space: nowrap;
+		cursor: default;
+	}
+	.marquee {
+		width: 100%;
+		overflow: hidden;
+	}
+	.ru {
+		display: none;
+	}
+	&:hover {
+		.en {
+			display: none;
+		}
+		.ru {
+			display: block;
+		}
+	}
+}
+nav {
+	width: 100%;
+	display: table;
+	background: black;
+	color: $white;
+	a, a:visited {
+		color: $white;
+		// text-transform: uppercase;
+		&:hover {
+			&:nth-child(odd) {
+				color: $red;
+			}
+			&:nth-child(even) {
+				color: $blue;	
+			}
+		}
+	}
+	h2 {
+		display: inline-block;
+		margin: 1em;
+	}
+}
