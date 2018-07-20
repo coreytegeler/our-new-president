@@ -5,36 +5,46 @@ html(lang='en-us', style='height: 100%; visibility: visible;')
 		meta(charset='utf-8')
 		meta(name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no')
 		script(src='./assets/js/jquery-3.2.1.min.js')
+		//- script(src='./assets/js/isotope.pkgd.min.js')
+		script(src='./assets/js/packery.pkgd.min.js')
+		script(src='./assets/js/draggabilly.pkgd.min.js')
 		script(src='./assets/js/jquery.marquee.min.js')
 		script(src='./assets/js/scripts.js?v='+ver)
 		//- script(src='./assets/js/jquery-ui.min.js')
 		//- link(href='./assets/css/bootstrap-grid.min.css' rel='stylesheet')
 		link(href='./assets/css/styles.css?v='+ver rel='stylesheet')
 	body
+
+		include screenings.pug
+		main
+			section
+				.flag.white
+					.marquee(data-duration='9000' data-direction='left')
+						h1.en Our New President&nbsp;
+						h1.ru наш новый президент&nbsp; 
+				.flag.blue
+					.marquee(data-duration='9000' data-direction='right')
+						h1.en Our New President&nbsp;
+						h1.ru наш новый президент&nbsp; 
+				.flag.red
+					.marquee(data-duration='9000' data-direction='left')
+						h1.en Our New President&nbsp; 
+						h1.ru наш новый президент&nbsp; 
+			section.hidden
+				.flag.white
+					h1.en Our
+					h1.ru наш
+				.flag.blue
+					h1.en New
+					h1.ru новый
+				.flag.red
+					h1.en President
+					h1.ru президент
 		include nav.pug
-		section#white
-			.marquee(data-duration='9000' data-direction='left')
-				h1.en Our New President&nbsp;
-				h1.ru наш новый президент&nbsp; 
-		section#blue
-			.marquee(data-duration='9000' data-direction='right')
-				h1.en Our New President&nbsp;
-				h1.ru наш новый президент&nbsp; 
-		section#red
-			.marquee(data-duration='9000' data-direction='left')
-				h1.en Our New President&nbsp; 
-				h1.ru наш новый президент&nbsp; 
-		include nav.pug
-		section#white
-			h1.en Our
-			h1.ru наш
-		section#blue
-			h1.en New
-			h1.ru новый
-		section#red
-			h1.en President
-			h1.ru президент
-		include nav.pug
+
+		include grid.pug
+
+		include screenings.pug
 
 	
 

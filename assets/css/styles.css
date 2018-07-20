@@ -11,27 +11,30 @@ h1 {
 h2 {
   font-size: 20px; }
 
-section {
+main section.hidden {
+  display: none; }
+
+.flag {
   height: calc(100vh/3 - 20px); }
-  section#white {
+  .flag.white {
     background: #FFFFFF; }
-  section#blue {
+  .flag.blue {
     background: #124BB8; }
-  section#red {
+  .flag.red {
     background: #DC372B; }
-  section h1 {
+  .flag h1 {
     margin: 0;
     line-height: 1em;
     white-space: nowrap;
     cursor: default; }
-  section .marquee {
+  .flag .marquee {
     width: 100%;
     overflow: hidden; }
-  section .ru {
+  .flag .ru {
     display: none; }
-  section:hover .en {
+  .flag:hover .en {
     display: none; }
-  section:hover .ru {
+  .flag:hover .ru {
     display: block; }
 
 nav {
@@ -48,3 +51,21 @@ nav {
   nav h2 {
     display: inline-block;
     margin: 1em; }
+
+.grid {
+  background: black;
+  padding: 0 5px 5px 5px; }
+  .grid figure {
+    width: calc(10% - 10px - (10px/10));
+    height: 10vw;
+    border: 5px solid black;
+    margin: 0;
+    cursor: all-scroll; }
+    .grid figure:nth-child(3n+1) {
+      background: #FFFFFF; }
+    .grid figure:nth-child(3n+2) {
+      background: #124BB8; }
+    .grid figure:nth-child(3n+3) {
+      background: #DC372B; }
+    .grid figure.is-dragging {
+      z-index: 100; }
